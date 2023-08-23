@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Bar</title>
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <!-- Demo styles -->
+    <style>
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .swiper-pagination {
+        padding: 2px 5px 2px 5px;
+        color: #2b323b;
+        background-color: #f1f5f9;
+        text-align: left;
+        width: fit-content;
+        margin-left: 5px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body class="font-primary">
+    <div class="w-full h-80">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="src/img/img2.jpg" alt="" /></div>
+          <div class="swiper-slide"><img src="src/img/img3.jpg" alt="" /></div>
+          <div class="swiper-slide"><img src="src/img/img4.jpg" alt="" /></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
