@@ -32,4 +32,38 @@ closeButtons.forEach((button, index) => {
   });
 });
 
+var swiper = new Swiper(".mySwiper", {
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+window.addEventListener("scroll", function () {
+  const nav = document.getElementById("nav-product");
+  const icons = document.querySelectorAll("#nav-icon");
+
+  if (window.scrollY > 10) {
+    icons.forEach((e) => {
+      e.classList.remove("text-white");
+      e.classList.add("text-slate-800");
+    });
+    nav.classList.remove("bg-black");
+    nav.classList.remove("bg-opacity-40");
+    nav.classList.add("bg-white");
+  } else {
+    icons.forEach((e) => {
+      e.classList.add("text-white");
+      e.classList.remove("text-slate-800");
+    });
+    nav.classList.add("bg-black");
+    nav.classList.add("bg-opacity-40");
+    nav.classList.remove("bg-white");
+  }
+});
+
 
