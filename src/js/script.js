@@ -67,3 +67,8 @@ window.addEventListener("scroll", function () {
 });
 
 
+document.getElementById("button.play").addEventListener('click', () => {
+  console.log("ok");
+})
+
+
