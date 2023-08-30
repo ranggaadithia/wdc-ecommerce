@@ -10,8 +10,8 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
   </head>
-  <body class="font-primary" style="padding-bottom: 2000px">
-    <div class="flex md:items-center" style="height: 80vh">
+  <body class="font-sans" style="padding-bottom: 2000px">
+    <div class="flex md:items-center" style="height: 90vh">
       <div class="md:w-1/2 md:block hidden text-center">
         <h1 class="text-5xl font-semibold">The Room <br />You've Dreaming</h1>
         <p class="mt-5 mb-10 text-lg text-slate-700 leading-relaxed">
@@ -21,9 +21,13 @@
         <a href="" class="button-md">Explore Now</a>
       </div>
       <div
-        class="md:w-1/2 w-full relative bg-[url('../../src/img/inte2.jpg')] bg-cover bg-center bg-no-repeat bg-fixed"
+        class="md:w-1/2 w-full relative bg-[url('../../src/img/inte2.jpg')] bg-cover bg-no-repeat bg-center bg-fixed h-full md:bg-none"
       >
-        <img src="src/img/image-section-1.png" class="md:block hidden" alt="" />
+        <img
+          src="src/img/image-section-1.png"
+          class="md:block hidden h-full w-full"
+          alt=""
+        />
         <div
           class="flex flex-col items-center justify-center h-full text-center bg-black/30 md:hidden"
         >
@@ -37,13 +41,85 @@
           <a href="" class="button-md">Explore Now</a>
         </div>
         <button
-          class="absolute right-2 -bottom-1 md:inset-0 drop-shadow-xl"
+          class="absolute right-2 -bottom-1 md:inset-0 drop-shadow-2xl"
           id="button-play"
         >
           <i
-            class="bi bi-play-fill md:text-6xl md:px-5 md:pt-5 md:pb-4 text-3xl px-3 py-2 text-white bg-pink-500 rounded-full"
+            class="bi bi-play-fill md:text-6xl md:px-5 md:pt-2 md:pb-2 text-3xl px-3 py-2 text-white bg-pink-500 rounded-full"
           ></i>
         </button>
+      </div>
+    </div>
+    <div class="w-full bg-slate-50 py-20 container px-4 mx-auto">
+      <h3 class="text-2xl font-semibold">
+        Browse The Room <br />
+        That We Designed For You
+      </h3>
+      <div class="grid grid-cols-1 md:grid-rows-2 md:grid-cols-9 mt-5 md:gap-4">
+        <a
+          href=""
+          class="relative overflow-hidden rounded-xl h-40 md:row-span-1 md:col-span-4 md:h-full hover:drop-shadow-lg transition-all"
+        >
+          <img
+            src="src/img/image-catalog-1.png"
+            alt=""
+            class="object-cover h-full w-full"
+          />
+          <div
+            class="absolute flex justify-center flex-col inset-y-0 right-8 md:right-16"
+          >
+            <h5 class="font-medium text-lg">Living Room</h5>
+            <p>803 items</p>
+          </div>
+        </a>
+        <a
+          href=""
+          class="relative overflow-hidden rounded-xl h-40 mt-3 md:row-span-2 md:h-full md:col-span-2 md:mt-0 hover:drop-shadow-lg transition-all"
+        >
+          <img
+            src="src/img/image-catalog-3.png"
+            alt=""
+            class="object-cover h-full w-full"
+          />
+          <div
+            class="absolute flex justify-center flex-col inset-y-0 right-8 md:inset-x-0 md:items-center md:justify-start md:top-10"
+          >
+            <h5 class="font-medium text-lg">Decoration</h5>
+            <p>2.509 items</p>
+          </div>
+        </a>
+        <a
+          href=""
+          class="relative overflow-hidden rounded-xl h-40 mt-3 md:row-span-2 md:h-full md:col-span-3 md:mt-0 hover:drop-shadow-lg transition-all"
+        >
+          <img
+            src="src/img/image-catalog-4.png"
+            alt=""
+            class="object-cover h-full w-full"
+          />
+          <div
+            class="absolute flex justify-center flex-col inset-y-0 right-8 md:inset-x-0 md:items-center md:justify-start md:top-10"
+          >
+            <h5 class="font-medium text-lg">Bed Room</h5>
+            <p>1.822 items</p>
+          </div>
+        </a>
+        <a
+          href=""
+          class="relative overflow-hidden rounded-xl h-40 mt-3 md:col-span-4 md:mt-0 md:h-full hover:drop-shadow-lg transition-all"
+        >
+          <img
+            src="src/img/image-catalog-2.png"
+            alt=""
+            class="object-cover h-full w-full"
+          />
+          <div
+            class="absolute flex justify-center flex-col inset-y-0 right-8 md:right-16"
+          >
+            <h5 class="font-medium text-lg">Children Room</h5>
+            <p>481 items</p>
+          </div>
+        </a>
       </div>
     </div>
   </body>
