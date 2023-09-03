@@ -13,6 +13,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
+    <script
+      src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js"
+      defer
+    ></script>
     <style>
       .swiper-pagination {
         padding: 2px 5px 2px 5px;
@@ -106,13 +110,30 @@
           solution for the way we work today. A comprehensive product family,
           Jetty features a variety of elegant chairs and sofas.
         </p>
-        <button
-          class="mt-12 w-full py-3 border-2 border-pink-300 rounded-lg text-lg text-pink-400 font-medium"
-        >
-          View Product in AR <i class="bi bi-box"></i>
-        </button>
       </div>
     </div>
+
+    <model-viewer
+      src="src/img/office_wheel_chair.glb"
+      ios-src="src/img/office_wheel_chair.usdz"
+      poster="src/img/showcase-1.front.jpg"
+      alt="A 3D model of an astronaut"
+      shadow-intensity="1"
+      camera-controls
+      auto-rotate
+      ar
+      class="w-full h-96"
+      style="background-color: #eeeeee"
+    >
+      <button
+        slot="ar-button"
+        id="ar-button"
+        class="w-52 py-3 bg-pink-400 rounded-full text-white absolute inset-x-0 bottom-12 flex justify-center mx-auto items-center"
+      >
+        <img src="src/img/augmented-reality.png" alt="" class="w-6 mr-2" />
+        <p>View in your space</p>
+      </button>
+    </model-viewer>
 
     <div class="bg-slate-50 pt-12">
       <div class="container mx-auto px-4">
@@ -270,6 +291,11 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
 
     <script>
       var swiper = new Swiper(".mySwiper", {
