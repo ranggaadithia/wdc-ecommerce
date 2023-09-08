@@ -11,6 +11,94 @@
     />
   </head>
   <body class="font-sans" style="padding-bottom: 2000px">
+    <div class="fixed w-full top-0 z-50">
+      <nav
+        class="bg-transparent py-5 md:px-12 px-4 transition-all duration-300 ease-in-out"
+      >
+        <div class="flex justify-between items-center">
+          <div class="md:ml-2">
+            <a href="#">
+              <img src="/src/img/logo.png" alt="" class="w-24 md:w-auto" />
+            </a>
+          </div>
+          <ul class="gap-7 text-xl text-white font-medium flex md:hidden">
+            <li>
+              <a href="" class="hover:text-pink-400 transition-all"
+                ><i class="bi bi-search"></i
+              ></a>
+            </li>
+            <li>
+              <a href="" class="hover:text-pink-400 transition-all"
+                ><i class="bi bi-bag"></i
+              ></a>
+            </li>
+            <li>
+              <a href="" class="hover:text-pink-400 transition-all"
+                ><i class="bi bi-list"></i
+              ></a>
+            </li>
+          </ul>
+          <ul class="gap-7 mr-8 text-lg text-white font-medium hidden md:flex">
+            <li>
+              <a
+                href=""
+                class="hover:underline hover:decoration-pink-400 hover:underline-offset-8 transition-all duration-300"
+                >Showcase</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:underline hover:decoration-pink-400 hover:underline-offset-8 transition-all duration-300"
+                >Catalog</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:underline hover:decoration-pink-400 hover:underline-offset-8 transition-all duration-300"
+                >Delivery</a
+              >
+            </li>
+            <li>
+              <a href="" class="hover:text-pink-400 transition-all"
+                ><i class="bi bi-search"></i
+              ></a>
+            </li>
+            <li>
+              <a href="" class="hover:text-pink-400 transition-all"
+                ><i class="bi bi-bag"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <ul
+          class="flex flex-col mt-5 pb-5 md:hidden text-center gap-y-5 border-t-2"
+        >
+          <li class="mt-2">
+            <a
+              href=""
+              class="hover:underline hover:decoration-pink-400 hover:underline-offset-8 transition-all duration-300"
+              >Showcase</a
+            >
+          </li>
+          <li>
+            <a
+              href=""
+              class="hover:underline hover:decoration-pink-400 hover:underline-offset-8 transition-all duration-300"
+              >Catalog</a
+            >
+          </li>
+          <li>
+            <a
+              href=""
+              class="hover:underline hover:decoration-pink-400 hover:underline-offset-8 transition-all duration-300"
+              >Delivery</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
     <div class="flex md:items-center" style="height: 90vh">
       <div class="md:w-1/2 md:block hidden text-center">
         <h1 class="text-5xl font-semibold">The Room <br />You've Dreaming</h1>
@@ -25,7 +113,7 @@
       >
         <img
           src="src/img/image-section-1.png"
-          class="md:block hidden h-full w-full"
+          class="md:block hidden h-full w-full brightness-75"
           alt=""
         />
         <div
@@ -45,12 +133,12 @@
           id="button-play"
         >
           <i
-            class="bi bi-play-fill md:text-6xl md:px-5 md:pt-2 md:pb-2 text-3xl px-3 py-2 text-white bg-pink-500 rounded-full"
+            class="bi bi-play-fill md:text-6xl md:px-5 md:pt-4 md:pb-4 text-3xl px-3 py-2 text-white bg-pink-500 rounded-full"
           ></i>
         </button>
       </div>
     </div>
-    <div class="w-full bg-slate-50 py-20 container px-4 mx-auto">
+    <div class="w-full bg-slate-50 py-20 px-4 mx-auto">
       <h3 class="text-2xl font-semibold">
         Browse The Room <br />
         That We Designed For You
@@ -122,5 +210,15 @@
         </a>
       </div>
     </div>
+    <script>
+      window.addEventListener("scroll", function () {
+        var nav = document.querySelector("nav");
+        if (window.scrollY > 10) {
+          nav.classList.add("bg-glass");
+        } else {
+          nav.classList.remove("bg-glass");
+        }
+      });
+    </script>
   </body>
 </html>
