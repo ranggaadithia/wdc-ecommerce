@@ -23,9 +23,12 @@
           </div>
           <ul class="gap-7 text-xl text-white font-medium flex md:hidden">
             <li>
-              <a href="" class="hover:text-pink-400 transition-all"
-                ><i class="bi bi-search"></i
-              ></a>
+              <button
+                class="hover:text-pink-400 transition-all"
+                id="search-button"
+              >
+                <i class="bi bi-search"></i>
+              </button>
             </li>
             <li>
               <a href="" class="hover:text-pink-400 transition-all"
@@ -33,9 +36,9 @@
               ></a>
             </li>
             <li>
-              <a href="" class="hover:text-pink-400 transition-all"
-                ><i class="bi bi-list"></i
-              ></a>
+              <button class="transition-all" id="humberger-menu">
+                <i class="bi bi-list"></i>
+              </button>
             </li>
           </ul>
           <ul class="gap-7 mr-8 text-lg text-white font-medium hidden md:flex">
@@ -61,9 +64,12 @@
               >
             </li>
             <li>
-              <a href="" class="hover:text-pink-400 transition-all"
-                ><i class="bi bi-search"></i
-              ></a>
+              <button
+                class="hover:text-pink-400 transition-all"
+                id="search-button"
+              >
+                <i class="bi bi-search"></i>
+              </button>
             </li>
             <li>
               <a href="" class="hover:text-pink-400 transition-all"
@@ -73,7 +79,8 @@
           </ul>
         </div>
         <ul
-          class="flex flex-col mt-5 pb-5 md:hidden text-center gap-y-5 border-t-2"
+          class="hidden flex-col mt-5 pb-5 md:hidden text-center gap-y-5 border-t-2 transition-all duration-300 ease-in-out"
+          id="list-menu"
         >
           <li class="mt-2">
             <a
@@ -97,6 +104,85 @@
             >
           </li>
         </ul>
+        <div class="mt-16 h-screen md:h-fit hidden" id="search-bar">
+          <form
+            action=""
+            class="flex items-center"
+            name="searchBar"
+            id="searchBar"
+          >
+            <i class="bi bi-search mr-3 text-gray-500 text-xl"></i>
+            <input
+              type="text"
+              name="keyword"
+              id=""
+              class="bg-transparent outline-none w-full placeholder:text-2xl placeholder:font-semibold placeholder:text-gray-500 text-2xl font-semibold"
+              autofocus
+              autocomplete="off"
+              placeholder="Search in LuxSpace"
+            />
+          </form>
+          <ul class="mt-10 md:mt-14 text-sm">
+            <li class="text-gray-400">Suggested Search</li>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-search mr-2"></i>
+                Classic Oak Buffet
+              </li>
+            </a>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-search mr-2"></i>
+                Old Teak Wood Shoe Rack
+              </li>
+            </a>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-search mr-2"></i>
+                Victoria's Regal Bed
+              </li>
+            </a>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-search mr-2"></i>
+                Carrara Marble Coffee Table
+              </li>
+            </a>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-search mr-2"></i>
+                Mirror
+              </li>
+            </a>
+          </ul>
+          <ul class="mt-10 text-sm lg:hidden">
+            <li class="text-gray-400">Quick Links</li>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-arrow-right-short mr-2"></i>
+                Showcase
+              </li>
+            </a>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-arrow-right-short mr-2"></i>
+                Catalog
+              </li>
+            </a>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-arrow-right-short mr-2"></i>
+                Delivery
+              </li>
+            </a>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-arrow-right-short mr-2"></i>
+                Find a Store
+              </li>
+            </a>
+          </ul>
+        </div>
       </nav>
     </div>
     <div class="flex md:items-center" style="height: 90vh">
@@ -212,12 +298,43 @@
     </div>
     <script>
       window.addEventListener("scroll", function () {
-        var nav = document.querySelector("nav");
+        const nav = document.querySelector("nav");
         if (window.scrollY > 10) {
           nav.classList.add("bg-glass");
         } else {
           nav.classList.remove("bg-glass");
         }
+      });
+
+      const humList = document.getElementById("humberger-menu");
+
+      humList.addEventListener("click", () => {
+        humList.classList.toggle("text-pink-400");
+        const listMenu = document.getElementById("list-menu");
+        const nav = document.querySelector("nav");
+        nav.classList.add("bg-glass");
+        listMenu.classList.toggle("hidden");
+        listMenu.classList.toggle("flex");
+      });
+
+      const searchBar = document.getElementById("search-bar");
+      const searchButton = document.querySelectorAll("#search-button");
+
+      searchButton.forEach((button) => {
+        button.addEventListener("click", () => {
+          button.classList.toggle("text-pink-400");
+          const nav = document.querySelector("nav");
+          nav.classList.add("bg-glass");
+          searchBar.classList.toggle("hidden");
+
+          // Tambahkan penundaan sebelum mendapatkan fokus pada elemen input
+          setTimeout(() => {
+            const inputElement = searchBar.querySelector(
+              'input[name="keyword"]'
+            );
+            inputElement.focus();
+          }, 100);
+        });
       });
     </script>
   </body>

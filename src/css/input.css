@@ -8,7 +8,7 @@
 }
 
 .bg-glass {
-  @apply backdrop-blur-md bg-white/90 md:bg-white/80 py-3 drop-shadow-xl;
+  @apply backdrop-blur-md bg-white/90  py-3 drop-shadow-xl;
 }
 
 .bg-glass ul {
