@@ -1,24 +1,66 @@
-// search suggest pop-up
-const searchBar = document.getElementById('search-bar')
-const searchSuggest = document.getElementById('search-suggest')
+window.addEventListener("scroll", function () {
+  const nav = document.querySelector("nav");
+  if (window.scrollY > 10) {
+    nav.classList.add("bg-glass");
+  } else {
+    nav.classList.remove("bg-glass");
+  }
+});
 
-searchBar.addEventListener('click', function(event) {
- searchSuggest.classList.remove('hidden')
- event.stopPropagation();
-})
+const humList = document.getElementById("humberger-menu");
 
-const backSearch = document.getElementById("back-search")
-searchBar.addEventListener('click', function(event) {
-  backSearch.classList.remove('hidden')
-})
-backSearch.addEventListener('click', e => {
-  backSearch.classList.add('hidden')
-})
+humList.addEventListener("click", () => {
+  humList.classList.toggle("text-pink-400");
+  const listMenu = document.getElementById("list-menu");
+  const nav = document.querySelector("nav");
+  nav.classList.add("bg-glass");
+  listMenu.classList.toggle("hidden");
+  listMenu.classList.toggle("flex");
+});
 
-document.addEventListener('click', function(event) {
- if (!searchSuggest.contains(event.target)) {
-   searchSuggest.classList.add('hidden');
- }
+const searchBar = document.getElementById("search-bar");
+const searchButton = document.querySelectorAll("#search-button");
+
+// Fungsi untuk menyembunyikan searchBar
+function hideSearchBar() {
+  searchBar.classList.add("hidden");
+}
+
+// Event listener untuk saat tombol "Esc" ditekan
+document.addEventListener("keyup", (e) => {
+  if (e.key === "Escape") {
+    hideSearchBar();
+  }
+});
+
+// Event listener untuk saat dokumen di-klik
+document.addEventListener("click", (event) => {
+  // Periksa apakah elemen yang diklik bukan bagian dari searchBar atau searchButton
+  if (
+    !searchBar.contains(event.target) &&
+    !Array.from(searchButton).some((button) =>
+      button.contains(event.target)
+    )
+  ) {
+    hideSearchBar();
+  }
+});
+
+searchButton.forEach((button) => {
+  button.addEventListener("click", () => {
+    button.classList.toggle("text-pink-400");
+    const nav = document.querySelector("nav");
+    nav.classList.add("bg-glass");
+    searchBar.classList.toggle("hidden");
+
+    // Tambahkan penundaan sebelum mendapatkan fokus pada elemen input
+    setTimeout(() => {
+      const inputElement = searchBar.querySelector(
+        'input[name="keyword"]'
+      );
+      inputElement.focus();
+    }, 100);
+  });
 });
 
 
