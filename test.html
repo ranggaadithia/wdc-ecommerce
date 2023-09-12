@@ -7,15 +7,22 @@
     <link rel="stylesheet" href="src/css/style.css" />
   </head>
   <body>
-    <button onclick="on()">clock</button>
-    <div
-      class="w-10 h-10 bg-red-500 fixed bottom-0 inset-x-0 translate-x-[-100%] transform transition-transform duration-1000 ease-in-out"
-      id="ba"
-    ></div>
-    <script>
-      const on = () => {
-        document.getElementById("ba").classList.remove("translate-x-[-100%]");
-      };
-    </script>
+    <div class="flex justify-start" id="cart-card">
+      <div class="bg-red-100">
+        <img
+          src="src/img/SerratWhiteSofa3QSSF23.webp"
+          alt=""
+          class="w-36 md:w-3/12 rounded-md bg-red-300"
+        />
+      </div>
+      <div class="flex flex-col justify-center bg-red-200">
+        <h1 class="text-md font-semibold">Serrat White Fabric Sofa</h1>
+        <p class="text-sm text-gray-600 mt-3">Living Room</p>
+        <p class="text-sm font-semibold">IDR 50.999.000</p>
+      </div>
+      <button id="close-cart-button">
+        <i class="bi bi-x-lg text-pink-400"></i>
+      </button>
+    </div>
   </body>
 </html>
