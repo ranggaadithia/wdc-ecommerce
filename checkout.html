@@ -203,66 +203,219 @@
       </nav>
     </div>
 
-    <div class="px-4 md:px-8 mx-auto">
-      <ol
-        class="flex items-center w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base mt-5 mx-auto border-b-2"
-      >
-        <li
-          class="flex md:w-full items-center text-pink-400 sm:after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700 font-semibold"
-        >
-          <span
-            class="flex items-center after:content-['/'] sm:after:hidden after:mx-2 after:text-gray-200 dark:after:text-gray-500"
+    <div class="flex mt-10 mx-auto md:px-8 flex-wrap">
+      <div class="w-full md:w-2/3">
+        <h1 class="text-2xl font-semibold mb-5 ml-4 md:ml-0">Checkout</h1>
+        <ul class="px-4 md:px-0">
+          <li
+            class="border-b-2 border-dotted border-t-2 flex items-center justify-between py-5"
           >
-            <span class="mr-2">1</span>
-            Personal <span class="hidden sm:inline-flex sm:ml-2">Info</span>
-          </span>
-        </li>
-        <li
-          class="flex md:w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700"
-        >
-          <span
-            class="flex items-center after:content-['/'] sm:after:hidden after:mx-2 after:text-gray-200 dark:after:text-gray-500"
+            <h1 class="font-semibold text-lg md:text-xl">
+              Serrat White Fabric Sofa
+            </h1>
+            <p class="font-medium">IDR 50.999.000</p>
+          </li>
+          <li
+            class="border-b-2 border-dotted flex items-center justify-between py-5"
           >
-            <span class="mr-2">2</span>
-            Account <span class="hidden sm:inline-flex sm:ml-2">Info</span>
-          </span>
-        </li>
-        <li class="flex items-center">
-          <span class="mr-2">3</span>
-          Confirmation
-        </li>
-      </ol>
-      <div class="mt-5">
-        <h1 class="text-center text-lg font-medium">
-          Fill in your personal data
-        </h1>
-        <form action="" class="flex flex-col mt-3">
-          <div class="mb-3">
-            <label for="">name</label>
-            <input
-              type="text"
-              class="border-b-2 border-pink-300 focus:outline-none w-full"
-              placeholder=""
-            />
-          </div>
-          <div class="mb-3">
-            <label for="">email</label>
-            <input
-              type="text"
-              class="border-b-2 border-pink-300 focus:outline-none w-full"
-              placeholder=""
-            />
-          </div>
-          <div class="mb-3">
-            <label for="">phone</label>
-            <input
-              type="text"
-              class="border-b-2 border-pink-300 focus:outline-none w-full"
-              placeholder=""
-            />
-          </div>
-        </form>
+            <h1 class="font-semibold md:text-xl">Muir Camel Velvet Chair</h1>
+            <p class="font-medium">IDR 19.399.000</p>
+          </li>
+          <li
+            class="border-b-2 border-dotted flex items-center justify-between py-5"
+          >
+            <h1 class="font-semibold md:text-xl">Cameranoses King Bed</h1>
+            <p class="font-medium">IDR 24.599.000</p>
+          </li>
+          <li
+            class="border-b-2 border-black flex items-center justify-between py-5"
+          >
+            <h1 class="font-semibold md:text-xl">Sift Gold MK Side Table</h1>
+            <p class="font-medium">IDR 1.500.000</p>
+          </li>
+          <li class="flex justify-between items-center py-1 mt-1">
+            <h4 class="font-semibold">Grand Total :</h4>
+            <p>IDR 96.497.000</p>
+          </li>
+          <li class="flex justify-between items-center py-1">
+            <h4 class="font-semibold">TAX (10%) :</h4>
+            <p>IDR 9.649.700</p>
+          </li>
+          <li class="flex justify-between items-center py-1">
+            <h4 class="font-semibold">Shipping :</h4>
+            <p>IDR 1.340.000</p>
+          </li>
+          <li
+            class="flex justify-between items-center py-1 border-b-2 border-b-black"
+          >
+            <h4 class="font-semibold">Instalation & Services :</h4>
+            <p>IDR 300.000</p>
+          </li>
+          <li class="flex justify-between items-center py-1">
+            <h4 class="font-semibold text-lg">Total Price</h4>
+            <p class="font-semibold">IDR 107.786.700</p>
+          </li>
+        </ul>
       </div>
+      <section
+        class="w-full md:px-4 md:w-4/12 mt-10 md:mt-0"
+        id="shipping-detail"
+      >
+        <div class="bg-gray-100 px-4 py-6 md:p-8 md:rounded-3xl">
+          <form action="success.html">
+            <div class="flex flex-start mb-6">
+              <h3 class="text-2xl">Shipping Details</h3>
+            </div>
+            <div class="flex flex-col mb-4">
+              <label for="complete-name" class="text-sm mb-2"
+                >Complete Name</label
+              >
+              <input
+                data-input
+                id="complete-name"
+                class="border-gray-200 border rounded-lg px-4 py-2 bg-white text-sm focus:border-blue-200 focus:outline-none"
+                placeholder="Input your name"
+              />
+            </div>
+            <div class="flex flex-col mb-4">
+              <label for="email" class="text-sm mb-2">Email Address</label>
+              <input
+                data-input
+                type="email"
+                id="email"
+                class="border-gray-200 border rounded-lg px-4 py-2 bg-white text-sm focus:border-blue-200 focus:outline-none"
+                placeholder="Input your email address"
+              />
+            </div>
+            <div class="flex flex-col mb-4">
+              <label for="address" class="text-sm mb-2">Address</label>
+              <input
+                data-input
+                id="address"
+                class="border-gray-200 border rounded-lg px-4 py-2 bg-white text-sm focus:border-blue-200 focus:outline-none"
+                placeholder="Input your address"
+              />
+            </div>
+            <div class="flex flex-col mb-4">
+              <label for="phone-number" class="text-sm mb-2"
+                >Phone Number</label
+              >
+              <input
+                data-input
+                type="tel"
+                id="phone-number"
+                class="border-gray-200 border rounded-lg px-4 py-2 bg-white text-sm focus:border-blue-200 focus:outline-none"
+                placeholder="Input your phone number"
+              />
+            </div>
+            <div class="flex flex-col mb-4">
+              <label for="complete-name" class="text-sm mb-2"
+                >Choose Courier</label
+              >
+              <div class="flex -mx-2 flex-wrap">
+                <div class="px-2 w-6/12 h-24 mb-4">
+                  <button
+                    type="button"
+                    data-value="fedex"
+                    data-name="courier"
+                    class="border border-gray-200 focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full focus:outline-none"
+                  >
+                    <img
+                      src="src/img/logo-fedex.svg"
+                      alt="Logo Fedex"
+                      class="object-contain max-h-full"
+                    />
+                  </button>
+                </div>
+                <div class="px-2 w-6/12 h-24 mb-4">
+                  <button
+                    type="button"
+                    data-value="dhl"
+                    data-name="courier"
+                    class="border border-gray-200 focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full focus:outline-none"
+                  >
+                    <img
+                      src="src/img/logo-dhl.svg"
+                      alt="Logo dhl"
+                      class="object-contain max-h-full"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col mb-4">
+              <label for="complete-name" class="text-sm mb-2"
+                >Choose Payment</label
+              >
+              <div class="flex -mx-2 flex-wrap">
+                <div class="px-2 w-6/12 h-24 mb-4">
+                  <button
+                    type="button"
+                    data-value="midtrans"
+                    data-name="payment"
+                    class="border border-gray-200 focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full focus:outline-none"
+                  >
+                    <img
+                      src="src/img/logo-midtrans.png"
+                      alt="Logo midtrans"
+                      class="object-contain max-h-full"
+                    />
+                  </button>
+                </div>
+                <div class="px-2 w-6/12 h-24 mb-4">
+                  <button
+                    type="button"
+                    data-value="mastercard"
+                    data-name="payment"
+                    class="border border-gray-200 focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full focus:outline-none"
+                  >
+                    <img
+                      src="src/img/logo-mastercard.svg"
+                      alt="Logo mastercard"
+                    />
+                  </button>
+                </div>
+                <div class="px-2 w-6/12 h-24 mb-4">
+                  <button
+                    type="button"
+                    data-value="bitcoin"
+                    data-name="payment"
+                    class="border border-gray-200 focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full focus:outline-none"
+                  >
+                    <img
+                      src="src/img/logo-bitcoin.svg"
+                      alt="Logo bitcoin"
+                      class="object-contain max-h-full"
+                    />
+                  </button>
+                </div>
+                <div class="px-2 w-6/12 h-24 mb-4">
+                  <button
+                    type="button"
+                    data-value="american-express"
+                    data-name="payment"
+                    class="border border-gray-200 focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full focus:outline-none"
+                  >
+                    <img
+                      src="src/img/logo-american-express.svg"
+                      alt="Logo american-logo-american-express"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <button
+                type="submit"
+                disabled="disabled"
+                class="bg-pink-400 text-white hover:bg-black hover:text-pink-400 focus:outline-none w-full py-3 rounded-full text-lg focus:text-black transition-all duration-200 px-6 font-semibold"
+              >
+                Checkout Now
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
     </div>
     <script
       type="text/javascript"
