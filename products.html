@@ -10,7 +10,453 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
   </head>
-  <body class="font-sans" style="padding-bottom: 2000px">
-    hell
+  <body class="font-sans">
+    <div class="static w-full top-0 z-50">
+      <nav
+        class="bg-glass py-5 md:px-12 px-4 transition-all duration-300 ease-in-out"
+      >
+        <div class="flex justify-between items-center">
+          <div class="md:ml-2">
+            <a href="#">
+              <img src="/src/img/logo.png" alt="" class="w-24 md:w-auto" />
+            </a>
+          </div>
+          <ul class="gap-7 text-xl font-medium flex md:hidden text-white">
+            <li>
+              <button
+                class="hover:text-pink-400 transition-all"
+                id="search-button"
+              >
+                <i class="bi bi-search"></i>
+              </button>
+            </li>
+
+            <li>
+              <a href="" class="hover:text-pink-400 transition-all"
+                ><i class="bi bi-bag"></i
+              ></a>
+            </li>
+            <li>
+              <button class="transition-all" id="humberger-menu">
+                <i class="bi bi-list"></i>
+              </button>
+            </li>
+          </ul>
+          <ul class="gap-7 mr-8 text-lg text-white font-medium hidden md:flex">
+            <li>
+              <a
+                href=""
+                class="hover:underline hover:decoration-pink-400 hover:underline-offset-8 transition-all duration-300"
+                >Showcase</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:underline hover:decoration-pink-400 hover:underline-offset-8 transition-all duration-300"
+                >Catalog</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:underline hover:decoration-pink-400 hover:underline-offset-8 transition-all duration-300"
+                >Delivery</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:underline hover:decoration-pink-400 hover:underline-offset-8 transition-all duration-300"
+                >Find a Store</a
+              >
+            </li>
+            <li>
+              <button
+                class="hover:text-pink-400 transition-all"
+                id="search-button"
+              >
+                <i class="bi bi-search"></i>
+              </button>
+            </li>
+            <li>
+              <a href="" class="hover:text-pink-400 transition-all"
+                ><i class="bi bi-bag"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <ul
+          class="hidden flex-col h-screen mt-16 pb-5 md:hidden text-center gap-y-5 transition-all duration-300 ease-in-out text-lg font-medium"
+          id="list-menu"
+        >
+          <li class="mt-2">
+            <a
+              href=""
+              class="underline decoration-pink-400 underline-offset-8 active:text-pink-400 transition-all duration-300"
+              >Showcase</a
+            >
+          </li>
+          <li>
+            <a
+              href=""
+              class="underline decoration-pink-400 underline-offset-8 transition-all duration-300"
+              >Catalog</a
+            >
+          </li>
+          <li>
+            <a
+              href=""
+              class="underline decoration-pink-400 underline-offset-8 transition-all duration-300"
+              >Delivery</a
+            >
+          </li>
+          <li>
+            <a
+              href=""
+              class="underline decoration-pink-400 underline-offset-8 transition-all duration-300"
+              >Find a Store</a
+            >
+          </li>
+        </ul>
+        <div class="mt-16 h-screen md:h-fit hidden" id="search-bar">
+          <form
+            action=""
+            class="flex items-center"
+            name="searchBar"
+            id="searchBar"
+          >
+            <i class="bi bi-search mr-3 text-gray-500 text-xl"></i>
+            <input
+              type="text"
+              name="keyword"
+              id=""
+              class="bg-transparent outline-none w-full placeholder:text-2xl placeholder:font-semibold placeholder:text-gray-500 text-2xl font-semibold"
+              autofocus
+              autocomplete="off"
+              placeholder="Search in LuxSpace"
+              value="single sofa"
+            />
+          </form>
+
+          <ul class="mt-10 pb-5 md:mt-14 text-sm">
+            <li class="text-gray-400">Suggested Search</li>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-search mr-2"></i>
+                Classic Oak Buffet
+              </li>
+            </a>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-search mr-2"></i>
+                Old Teak Wood Shoe Rack
+              </li>
+            </a>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-search mr-2"></i>
+                Victoria's Regal Bed
+              </li>
+            </a>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-search mr-2"></i>
+                Carrara Marble Coffee Table
+              </li>
+            </a>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-search mr-2"></i>
+                Mirror
+              </li>
+            </a>
+          </ul>
+          <ul class="mt-10 text-sm lg:hidden">
+            <li class="text-gray-400">Quick Links</li>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-arrow-right-short mr-2"></i>
+                Showcase
+              </li>
+            </a>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-arrow-right-short mr-2"></i>
+                Catalog
+              </li>
+            </a>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-arrow-right-short mr-2"></i>
+                Delivery
+              </li>
+            </a>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-arrow-right-short mr-2"></i>
+                Find a Store
+              </li>
+            </a>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="px-4 md:px-8 mx-auto mt-10">
+      <!-- <div
+          class="snap-x lg:snap-none flex snap-mandatory overflow-scroll lg:overflow-hidden mt-5 pb-5 lg:justify-between"
+        >
+          <a href="" class="snap-center w-fit shrink-0 mx-2 group">
+            <img
+              src="src/img/sofas.webp"
+              alt=""
+              loading="lazy"
+              class="lg:w-44 w-24 rounded-sm hidden md:block"
+            />
+
+            <div class="mt-1">
+              <h3
+                class="text-base group-hover:decoration-pink-300 leading-tight text-center px-7 py-2 border-4 border-pink-300 rounded-md md:p-0 md:border-0 md:underline"
+              >
+                Sofas
+              </h3>
+            </div>
+          </a>
+          <a href="" class="snap-center w-fit shrink-0 mx-2 group">
+            <img
+              src="src/img/selectionals.webp"
+              alt=""
+              loading="lazy"
+              class="lg:w-44 w-24 rounded-sm hidden md:block"
+            />
+
+            <div class="mt-1">
+              <h3
+                class="text-base group-hover:decoration-pink-300 leading-tight text-center px-7 py-2 border-4 border-pink-300 rounded-md md:p-0 md:border-0 md:underline"
+              >
+                Selectial
+              </h3>
+            </div>
+          </a>
+          <a href="" class="snap-center w-fit shrink-0 mx-2 group">
+            <img
+              src="src/img/sleeper.webp"
+              alt=""
+              loading="lazy"
+              class="lg:w-44 w-24 rounded-sm"
+            />
+
+            <div class="mt-1">
+              <h3
+                class="text-base underline group-hover:decoration-pink-300 leading-tight text-center"
+              >
+                Slipeers
+              </h3>
+            </div>
+          </a>
+          <a href="" class="snap-center w-fit shrink-0 mx-2 group">
+            <img
+              src="src/img/accent.webp"
+              alt=""
+              loading="lazy"
+              class="lg:w-44 w-24 rounded-sm"
+            />
+
+            <div class="mt-1">
+              <h3
+                class="text-base underline group-hover:decoration-pink-300 leading-tight text-center"
+              >
+                Accent Chair
+              </h3>
+            </div>
+          </a>
+          <a href="" class="snap-center w-fit shrink-0 mx-2 group">
+            <img
+              src="src/img/benches.webp"
+              alt=""
+              loading="lazy"
+              class="lg:w-44 w-24 rounded-sm"
+            />
+
+            <div class="mt-1">
+              <h3
+                class="text-base underline group-hover:decoration-pink-300 leading-tight text-center"
+              >
+                Benches
+              </h3>
+            </div>
+          </a>
+          <a href="" class="snap-center w-fit shrink-0 mx-2 group">
+            <img
+              src="src/img/coffe.webp"
+              alt=""
+              loading="lazy"
+              class="lg:w-44 w-24 rounded-sm"
+            />
+
+            <div class="mt-1">
+              <h3
+                class="text-base underline group-hover:decoration-pink-300 leading-tight text-center"
+              >
+                Coffe Table
+              </h3>
+            </div>
+          </a>
+        </div> -->
+
+      <h1 class="text-2xl font-base text-center">
+        View All Living Room Furniture
+      </h1>
+      <div
+        class="overflow-x-auto pb-3 mt-5 pt-3 sticky top-0 bg-white shadow-md -mx-4 px-4"
+      >
+        <div class="flex items-center space-x-3">
+          <button
+            class="px-5 py-1 bg-black text-white rounded-md whitespace-nowrap"
+          >
+            View All
+          </button>
+          <button
+            class="px-5 py-1 border-2 border-black rounded-md whitespace-nowrap"
+          >
+            Free Pickup
+          </button>
+          <button
+            class="px-5 py-1 border-2 border-black rounded-md whitespace-nowrap"
+          >
+            Ready to Ship
+          </button>
+          <button
+            class="px-5 py-1 border-2 border-black rounded-md whitespace-nowrap"
+          >
+            Ship Within 4 Weeks
+          </button>
+        </div>
+      </div>
+      <div class="flex mt-5 flex-wrap flex-row justify-between">
+        <a href="" class="basis-1/2 p-2">
+          <img
+            src="src/img/selectionals.webp"
+            alt=""
+            loading="lazy"
+            class="w-fit rounded-sm"
+          />
+
+          <div class="mt-1">
+            <h3 class="text-base leading-tight font-extralight">
+              GWYNETH IVORY BOUCLE SWIVEL CHAIR
+            </h3>
+            <p class="mt-1">IDR 35.999.000</p>
+          </div>
+        </a>
+        <a href="" class="basis-1/2 p-2">
+          <img
+            src="src/img/sofas.webp"
+            alt=""
+            loading="lazy"
+            class="w-fit rounded-sm"
+          />
+
+          <div class="mt-1">
+            <h3 class="text-base leading-tight font-extralight">
+              MUIR CURVED WHITE BOUCLE SOFA
+            </h3>
+            <p class="mt-1">IDR 35.999.000</p>
+          </div>
+        </a>
+        <a href="" class="basis-1/2 p-2">
+          <img
+            src="src/img/product-3.webp"
+            alt=""
+            loading="lazy"
+            class="w-fit rounded-sm"
+          />
+
+          <div class="mt-1">
+            <h3 class="text-base leading-tight font-extralight">
+              MUIR CURVED VELVET SOFA
+            </h3>
+            <p class="mt-1">IDR 12.399.000</p>
+          </div>
+        </a>
+        <a href="" class="basis-1/2 p-2">
+          <img
+            src="src/img/product-1.webp"
+            alt=""
+            loading="lazy"
+            class="w-fit rounded-sm"
+          />
+
+          <div class="mt-1">
+            <h3 class="text-base leading-tight font-extralight uppercase">
+              Sift Gold MK Side Table
+            </h3>
+            <p class="mt-1">IDR 1.500.000</p>
+          </div>
+        </a>
+        <a href="" class="basis-1/2 p-2">
+          <img
+            src="src/img/product-2.webp"
+            alt=""
+            loading="lazy"
+            class="w-fit rounded-sm"
+          />
+
+          <div class="mt-1">
+            <h3 class="text-base leading-tight font-extralight uppercase">
+              Sift Gold MK Side Table
+            </h3>
+            <p class="mt-1">IDR 1.500.000</p>
+          </div>
+        </a>
+        <a href="" class="basis-1/2 p-2">
+          <img
+            src="src/img/product-4.webp"
+            alt=""
+            loading="lazy"
+            class="w-fit rounded-sm"
+          />
+
+          <div class="mt-1">
+            <h3 class="text-base leading-tight font-extralight uppercase">
+              Sift Gold MK Side Table
+            </h3>
+            <p class="mt-1">IDR 1.500.000</p>
+          </div>
+        </a>
+        <a href="" class="basis-1/2 p-2">
+          <img
+            src="src/img/sleeper.webp"
+            alt=""
+            loading="lazy"
+            class="w-fit rounded-sm"
+          />
+
+          <div class="mt-1">
+            <h3 class="text-base leading-tight font-extralight">
+              MUIR CURVED WHITE BOUCLE SOFA
+            </h3>
+            <p class="mt-1">IDR 35.999.000</p>
+          </div>
+        </a>
+        <a href="" class="basis-1/2 p-2">
+          <img
+            src="src/img/coffe.webp"
+            alt=""
+            loading="lazy"
+            class="w-fit rounded-sm"
+          />
+
+          <div class="mt-1">
+            <h3 class="text-base leading-tight font-extralight">COFFE TABLE</h3>
+            <p class="mt-1">IDR 2.399.000</p>
+          </div>
+        </a>
+      </div>
+      <a href="" class="mt-5 underline text-center mx-auto block pb-5"
+        >load more furniture
+      </a>
+    </div>
   </body>
 </html>
