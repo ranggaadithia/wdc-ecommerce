@@ -19,38 +19,214 @@
     ></script>
   </head>
   <body class="font-sans">
-    <nav
-      class="bg-black bg-opacity-40 fixed w-full z-20 top-0 left-0 px-5 flex justify-between py-2 transition-all lg:hidden"
-      id="nav-product"
-    >
-      <a href=""
-        ><i class="bi bi-arrow-left text-white text-2xl" id="nav-icon"></i
-      ></a>
-      <div class="flex w-1/2 justify-between">
-        <a href=""
-          ><i class="bi bi-search text-white text-xl" id="nav-icon"></i
-        ></a>
-        <a href=""
-          ><i class="bi bi-share text-white text-xl" id="nav-icon"></i
-        ></a>
-        <a href=""
-          ><i class="bi bi-cart text-white text-xl" id="nav-icon"></i
-        ></a>
-        <a href=""
-          ><i class="bi bi-list text-white text-2xl" id="nav-icon"></i
-        ></a>
-      </div>
-    </nav>
+    <div class="fixed lg:static w-full top-0 z-50">
+      <nav
+        class="bg-glass py-5 md:px-12 px-4 transition-all duration-300 ease-in-out"
+      >
+        <div class="flex justify-between items-center">
+          <div class="md:ml-2">
+            <a href="" class="md:hidden inline-block">
+              <i class="bi bi-arrow-left text-2xl text-black"></i>
+            </a>
+            <a href="#">
+              <img
+                src="/src/img/logo.png"
+                alt=""
+                class="w-24 md:w-auto hidden md:block"
+              />
+            </a>
+          </div>
+          <ul class="gap-7 text-xl font-medium flex md:hidden text-white">
+            <li>
+              <button
+                class="hover:text-pink-400 transition-all"
+                id="search-button"
+              >
+                <i class="bi bi-search"></i>
+              </button>
+            </li>
 
-    <div class="lg:flex lg:mt-14 lg:container lg:mx-auto lg:px-8">
-      <div class="w-full h-96 lg:h-[450px] lg:w-1/2">
+            <li>
+              <a href="" class="hover:text-pink-400 transition-all"
+                ><i class="bi bi-bag"></i
+              ></a>
+            </li>
+            <li>
+              <button class="transition-all" id="humberger-menu">
+                <i class="bi bi-list"></i>
+              </button>
+            </li>
+          </ul>
+          <ul class="gap-7 mr-8 text-lg text-white font-medium hidden md:flex">
+            <li>
+              <a
+                href=""
+                class="hover:underline hover:decoration-pink-400 hover:underline-offset-8 transition-all duration-300"
+                >Showcase</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:underline hover:decoration-pink-400 hover:underline-offset-8 transition-all duration-300"
+                >Catalog</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:underline hover:decoration-pink-400 hover:underline-offset-8 transition-all duration-300"
+                >Delivery</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:underline hover:decoration-pink-400 hover:underline-offset-8 transition-all duration-300"
+                >Find a Store</a
+              >
+            </li>
+            <li>
+              <button
+                class="hover:text-pink-400 transition-all"
+                id="search-button"
+              >
+                <i class="bi bi-search"></i>
+              </button>
+            </li>
+            <li>
+              <a href="" class="hover:text-pink-400 transition-all"
+                ><i class="bi bi-bag"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <ul
+          class="hidden flex-col h-screen mt-16 pb-5 md:hidden text-center gap-y-5 transition-all duration-300 ease-in-out text-lg font-medium"
+          id="list-menu"
+        >
+          <li class="mt-2">
+            <a
+              href=""
+              class="underline decoration-pink-400 underline-offset-8 active:text-pink-400 transition-all duration-300"
+              >Showcase</a
+            >
+          </li>
+          <li>
+            <a
+              href=""
+              class="underline decoration-pink-400 underline-offset-8 transition-all duration-300"
+              >Catalog</a
+            >
+          </li>
+          <li>
+            <a
+              href=""
+              class="underline decoration-pink-400 underline-offset-8 transition-all duration-300"
+              >Delivery</a
+            >
+          </li>
+          <li>
+            <a
+              href=""
+              class="underline decoration-pink-400 underline-offset-8 transition-all duration-300"
+              >Find a Store</a
+            >
+          </li>
+        </ul>
+        <div class="mt-16 h-screen md:h-fit hidden" id="search-bar">
+          <form
+            action=""
+            class="flex items-center"
+            name="searchBar"
+            id="searchBar"
+          >
+            <i class="bi bi-search mr-3 text-gray-500 text-xl"></i>
+            <input
+              type="text"
+              name="keyword"
+              id=""
+              class="bg-transparent outline-none w-full placeholder:text-2xl placeholder:font-semibold placeholder:text-gray-500 text-2xl font-semibold"
+              autofocus
+              autocomplete="off"
+              placeholder="Search in LuxSpace"
+              value="single sofa"
+            />
+          </form>
+
+          <ul class="mt-10 pb-5 md:mt-14 text-sm">
+            <li class="text-gray-400">Suggested Search</li>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-search mr-2"></i>
+                Classic Oak Buffet
+              </li>
+            </a>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-search mr-2"></i>
+                Old Teak Wood Shoe Rack
+              </li>
+            </a>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-search mr-2"></i>
+                Victoria's Regal Bed
+              </li>
+            </a>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-search mr-2"></i>
+                Carrara Marble Coffee Table
+              </li>
+            </a>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-search mr-2"></i>
+                Mirror
+              </li>
+            </a>
+          </ul>
+          <ul class="mt-10 text-sm lg:hidden">
+            <li class="text-gray-400">Quick Links</li>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-arrow-right-short mr-2"></i>
+                Showcase
+              </li>
+            </a>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-arrow-right-short mr-2"></i>
+                Catalog
+              </li>
+            </a>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-arrow-right-short mr-2"></i>
+                Delivery
+              </li>
+            </a>
+            <a href="" class="hover:bg-gray-100 block transition-all">
+              <li class="mt-3 font-semibold">
+                <i class="bi bi-arrow-right-short mr-2"></i>
+                Find a Store
+              </li>
+            </a>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="lg:flex lg:mt-10 lg:container lg:mx-auto lg:px-8 mt-12">
+      <div class="w-full h-96 lg:h-screen lg:w-1/2 lg:sticky lg:top-0">
         <div
           class="swiper mySwiper h-full w-full border-b-2 border-slate-200 lg:border-2 lg:rounded-lg"
         >
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <img
-                src="src/img/showcase-1.front.jpg"
+                src="src/img/sofa.webp"
                 alt=""
                 class="h-full w-full block object-cover object-top"
                 loading="lazy"
@@ -59,32 +235,37 @@
             </div>
             <div class="swiper-slide">
               <img
-                src="src/img/showcase-1.back.jpg"
-                alt=""
-                class="h-full w-full block object-cover"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img src="src/img/showcase-1.side.jpg" alt="" />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="src/img/showcase-1.rear.jpg"
+                src="src/img/sofa3.webp"
                 alt=""
                 class="h-full w-full block object-cover"
               />
             </div>
             <div class="swiper-slide">
               <img
-                src="src/img/showcase-1.top.jpg"
+                src="src/img/sofa7.webp"
+                alt=""
+                class="h-full w-full block object-cover"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="src/img/sofa5.webp"
+                alt=""
+                class="h-full w-full block object-cover"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="src/img/sofa6.webp"
                 alt=""
                 class="h-full w-full block object-cover"
               />
             </div>
           </div>
           <div
-            class="swiper-pagination !px-2 !py-1 !bg-slate-50 !border-2 !border-slate-300 !rounded-md !w-fit"
+            class="swiper-pagination !px-2 !py-1 !bg-slate-50 !border-2 !border-slate-300 !rounded-md !w-fit ml-3"
           ></div>
+
           <div
             class="swiper-button-next !text-pink-400 !hidden lg:!block"
           ></div>
@@ -96,22 +277,22 @@
 
       <div class="px-4 mx-auto lg:w-1/2">
         <div class="pt-3 py-5 border-b-2 border-slate-50">
-          <h1 class="text-3xl font-medium">ErgoLux Elegance Chair</h1>
-          <p class="mt-2 text-lg">IDR 12.000.000</p>
+          <h1 class="text-3xl font-medium">Single Camel Velvet Sofa</h1>
+          <p class="mt-2 text-lg">IDR 19.399.000</p>
         </div>
         <div class="pb-6 border-b-2 border-slate-50">
-          <p class="mt-1 leading-relaxed text-lg">
-            Tailored to a level of perfection synonymous with that of a Savile
-            Row suit and with understated quality in the detail, Jetty has been
-            influenced by timeless 1950s style.
+          <p class="mt-6 leading-relaxed text-lg">
+            Swivel chair by Lawson-Fenning draws on the designers' admiration of
+            California interior design in the 1950s and 1960s.
           </p>
-          <p class="mt-3 leading-relaxed text-lg">
-            Providing a subtle nod to the past, Jetty also provides a perfect
-            solution for the way we work today. A comprehensive product family,
-            Jetty features a variety of elegant chairs and sofas.
+
+          <p class="mt-1 leading-relaxed text-lg">
+            Inviting seat fully swivels 360 degrees, appearing to float above a
+            circular base of wood certified sustainable by the Forest
+            Stewardship Council.
           </p>
         </div>
-        <div class="justify-between mt-2 mb-6 hidden lg:flex lg:justify-start">
+        <div class="justify-between mt-6 mb-6 hidden lg:flex lg:justify-start">
           <button
             class="px-3 py-2 border-2 flex flex-row items-center rounded-md focus:border-none focus:ring focus:ring-pink-300"
           >
@@ -146,173 +327,257 @@
             <i class="bi bi-bag-plus"></i> Cart
           </button>
         </div>
-      </div>
-    </div>
+        <div id="accordionExample" class="lg:mt-10 -mx-4 lg:mx-auto">
+          <div
+            class="rounded-t-lg border border-t-1 border-neutral-200 bg-white"
+          >
+            <h2 class="mb-0" id="headingOne">
+              <button
+                class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-pink-400 [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)]"
+                type="button"
+                data-te-collapse-init
+                data-te-collapse-collapsed
+                data-te-target="#collapseOne"
+                aria-expanded="false"
+                aria-controls="collapseOne"
+              >
+                Dimentions
+                <span
+                  class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-pink-400 transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="!visible hidden"
+              data-te-collapse-item
+              aria-labelledby="headingOne"
+              data-te-parent="#accordionExample"
+            >
+              <div class="px-10 py-5">
+                <strong>OVERALL DIMENSIONS</strong>
+                <br />
+                Width: 35"<br />
+                Depth: 33"<br />
+                Height: 28"<br />
 
-    <div id="accordionExample" class="lg:mt-10">
-      <div class="rounded-t-lg border border-t-1 border-neutral-200 bg-white">
-        <h2 class="mb-0" id="headingOne">
-          <button
-            class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-pink-400 [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)]"
-            type="button"
-            data-te-collapse-init
-            data-te-collapse-collapsed
-            data-te-target="#collapseOne"
-            aria-expanded="false"
-            aria-controls="collapseOne"
-          >
-            Dimentions
-            <span
-              class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-pink-400 transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="h-6 w-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                <img
+                  src="src/img/sofa-dem.webp"
+                  alt=""
+                  loading="lazy"
+                  class="rounded-md mt-5 lg:p-10"
                 />
-              </svg>
-            </span>
-          </button>
-        </h2>
-        <div
-          id="collapseOne"
-          class="!visible hidden"
-          data-te-collapse-item
-          aria-labelledby="headingOne"
-          data-te-parent="#accordionExample"
-        >
-          <div class="px-5 py-4">
-            <strong>This is the second item's accordion body.</strong> It is
-            hidden by default, until the collapse plugin adds the appropriate
-            classes that we use to style each element. These classes control the
-            overall appearance, as well as the showing and hiding via CSS
-            transitions. You can modify any of this with custom CSS or
-            overriding our default variables. It's also worth noting that just
-            about any HTML can go within the <code>.accordion-body</code>,
-            though the transition does limit overflow.
+                <br />
+                <strong>SEAT DIMENSIONS</strong><br />
+                Width: 21" <br />Depth: 22"<br />
+                Height: 17"<br /><br />
+                <strong>DIAGIONAL DIMENSIONS</strong> <br />
+                Depth: 36"<br />
+                Depth: 45"<br /><br />
+                <strong>BACK CUSHION HEIGHT</strong> <br />Height: 28"<br /><br />
+                <strong>SEAT DIMENSIONS</strong><br />
+                Width: 21"<br />
+                Depth: 22"<br />
+                Height: 17"<br /><br />
+                <strong>ARM DIMENSIONS</strong><br />
+                Height: 28"
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="border border-t-0 border-neutral-200 bg-white">
-        <h2 class="mb-0" id="headingTwo">
-          <button
-            class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-pink-400 [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)]"
-            type="button"
-            data-te-collapse-init
-            data-te-collapse-collapsed
-            data-te-target="#collapseTwo"
-            aria-expanded="false"
-            aria-controls="collapseTwo"
-          >
-            Reviews (21) <i class="bi bi-star-fill ml-1"></i>
-            <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i> <i class="bi bi-star-half"></i>
-            <span
-              class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-pink-400 transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="h-6 w-6"
+          <div class="border border-t-0 border-neutral-200 bg-white">
+            <h2 class="mb-0" id="headingTwo">
+              <button
+                class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-pink-400 [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)]"
+                type="button"
+                data-te-collapse-init
+                data-te-collapse-collapsed
+                data-te-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                />
-              </svg>
-            </span>
-          </button>
-        </h2>
-        <div
-          id="collapseTwo"
-          class="!visible hidden"
-          data-te-collapse-item
-          aria-labelledby="headingTwo"
-          data-te-parent="#accordionExample"
-        >
-          <div class="px-5 py-4">
-            <strong>This is the second item's accordion body.</strong> It is
-            hidden by default, until the collapse plugin adds the appropriate
-            classes that we use to style each element. These classes control the
-            overall appearance, as well as the showing and hiding via CSS
-            transitions. You can modify any of this with custom CSS or
-            overriding our default variables. It's also worth noting that just
-            about any HTML can go within the <code>.accordion-body</code>,
-            though the transition does limit overflow.
+                Reviews (21) <i class="bi bi-star-fill ml-1"></i>
+                <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i> <i class="bi bi-star-half"></i>
+                <span
+                  class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-pink-400 transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="!visible hidden"
+              data-te-collapse-item
+              aria-labelledby="headingTwo"
+              data-te-parent="#accordionExample"
+            >
+              <div class="px-5 py-4">
+                <div class="flex text-2xl my-5 items-center">
+                  <h3 class="mr-3">4.7</h3>
+                  <div class="flex gap-x-1">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <span class="text-sm ml-3 underline font-light"
+                    >21 reviewers</span
+                  >
+                </div>
+                <div class="border-t-2 border-dotted">
+                  <div class="my-5">
+                    <div class="flex gap-x-1">
+                      <i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i>
+                    </div>
+                    <h3 class="font-semibold">Chic and modern</h3>
+                    <p class="font-light">
+                      We bought two of these chairs to go in a sitting ares
+                      along with a bar chest we also purchased from CB2 and we
+                      couldnt be happier with the purchase. The velvet fabric is
+                      buttery soft, the chair is super chic and modern and very
+                      comfortable
+                    </p>
+                  </div>
+                </div>
+                <div class="border-t-2 border-dotted">
+                  <div class="my-5">
+                    <div class="flex gap-x-1">
+                      <i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i>
+                    </div>
+                    <p class="font-light">
+                      <i> This customer provided a rating-only review. </i>
+                    </p>
+                  </div>
+                </div>
+                <div class="border-t-2 border-b-2 border-dotted">
+                  <div class="my-5">
+                    <div class="flex gap-x-1">
+                      <i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i>
+                    </div>
+                    <h3 class="font-semibold">Timeless Lux</h3>
+                    <p class="font-light">
+                      No need to think about it, the color is very suttle to
+                      match with anything the quality is too notch and they are
+                      very comfortable without need to break them in, best
+                      suited for comfortable formal livingroom, would get the
+                      best use for lounging, they are a pleasure to look at
+                    </p>
+                  </div>
+                </div>
+                <a href="" class="text-center underline mt-5 block"
+                  >view all reviews</a
+                >
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="border border-t-0 border-neutral-200 bg-white">
-        <h2 class="mb-0" id="headingThree">
-          <button
-            class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-pink-400 [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)]"
-            type="button"
-            data-te-collapse-init
-            data-te-collapse-collapsed
-            data-te-target="#collapseThree"
-            aria-expanded="false"
-            aria-controls="collapseThree"
-          >
-            Instalation
-            <span
-              class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-pink-400 transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="h-6 w-6"
+          <div class="border border-t-0 border-neutral-200 bg-white">
+            <h2 class="mb-0" id="headingThree">
+              <button
+                class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-pink-400 [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)]"
+                type="button"
+                data-te-collapse-init
+                data-te-collapse-collapsed
+                data-te-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                />
-              </svg>
-            </span>
-          </button>
-        </h2>
-        <div
-          id="collapseThree"
-          class="!visible hidden"
-          data-te-collapse-item
-          aria-labelledby="headingThree"
-          data-te-parent="#accordionExample"
-        >
-          <div class="px-5 py-4">
-            <strong>This is the second item's accordion body.</strong> It is
-            hidden by default, until the collapse plugin adds the appropriate
-            classes that we use to style each element. These classes control the
-            overall appearance, as well as the showing and hiding via CSS
-            transitions. You can modify any of this with custom CSS or
-            overriding our default variables. It's also worth noting that just
-            about any HTML can go within the <code>.accordion-body</code>,
-            though the transition does limit overflow.
+                Instalation
+                <span
+                  class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-pink-400 transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="!visible hidden"
+              data-te-collapse-item
+              aria-labelledby="headingThree"
+              data-te-parent="#accordionExample"
+            >
+              <div class="px-5 py-4 font-light">
+                Assembly may be required for this item based on shipping
+                location and delivery method. Items shipped via In-Home Delivery
+                will be placed in the room of your choice and assembled.
+                <br /><br />
+                All packaging will be removed and recycled at our warehouse for
+                Local In-Home Delivery, or placed at your curbside or nearest
+                trash pickup area for Long Distance In-Home Delivery. Items
+                shipped via Basic Freight Delivery or picked up in store will
+                require assembly. Easy-to-follow instructions will be included
+                in your order and are also available by clicking the Assembly
+                Instructions link below. You can view your assigned delivery
+                method in your Cart. If you have any questions, please email or
+                call us at 800.606.6252.
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <model-viewer
-      src="src/img/office_wheel_chair.glb"
-      ios-src="src/img/office_wheel_chair.usdz"
-      poster="src/img/showcase-1.front.jpg"
-      alt="A 3D model of an astronaut"
+      src="src/img/sofa.glb"
+      ios-src="src/img/sofa.usdz"
+      poster="src/img/sofa2.webp"
+      alt="sofa model"
       shadow-intensity="1"
       camera-controls
       auto-rotate
@@ -327,78 +592,93 @@
         <img src="src/img/augmented-reality.png" alt="" class="w-6 mr-2" />
         <p>View in your room</p>
       </button>
+      <button
+        class="w-fit px-5 py-2 bg-white rounded-full text-pink-400 ring-1 ring-pink-400 absolute top-12 right-12 justify-center mx-auto items-center hidden md:flex"
+      >
+        <p>AR view on your mobile.</p>
+        <img src="src/img/augmented-reality.png" alt="" class="w-6 ml-2" />
+      </button>
     </model-viewer>
 
     <div class="bg-white pt-12 pb-20">
-      <div class="px-4 mx-auto">
+      <div class="px-4 md:px-8 mx-auto">
         <h1 class="text-2xl font-semibold capitalize">
-          Complete Your Room <br />With What We Designed
+          Complete Your Room<br />
+          With What We Designed
         </h1>
         <div
           class="snap-x lg:snap-none flex snap-mandatory overflow-scroll lg:overflow-hidden mt-5 pb-12 lg:justify-between"
         >
           <div
-            class="snap-center drop-shadow-xl mx-3 w-9/5 bg-white w-fit rounded-xl shrink-0"
+            class="snap-center drop-shadow-md mx-3 w-9/5 bg-white w-fit shrink-0 rounded-md overflow-hidden"
           >
-            <div class="p-5">
-              <div class="rounded-2xl overflow-hidden">
-                <img
-                  src="src/img/chair-1 (1).png"
-                  alt=""
-                  class="drop-shadow-sm"
-                />
-              </div>
-            </div>
-            <div class="ml-5">
+            <img
+              src="src/img/product-1.webp"
+              alt=""
+              loading="lazy"
+              class="drop-shadow-sm w-64"
+            />
+
+            <div class="px-3 mt-3">
               <h3 class="text-xl font-semibold leading-tight">
-                EliteErgo Executive <br />Seating
+                Gwyneth Ivory Boucle<br />
+                Swivel Chair
               </h3>
-              <p class="mt-1 pb-5">IDR 9.999.000</p>
+              <p class="mt-1 pb-5">IDR 12.999.000</p>
             </div>
           </div>
           <div
-            class="snap-center drop-shadow-xl mx-3 w-9/5 bg-white w-fit rounded-xl shrink-0"
+            class="snap-center drop-shadow-md mx-3 w-9/5 bg-white w-fit shrink-0 rounded-md overflow-hidden"
           >
-            <div class="p-5">
-              <div class="rounded-2xl overflow-hidden">
-                <img src="src/img/chair-2.png" alt="" class="drop-shadow-sm" />
-              </div>
-            </div>
-            <div class="ml-5">
+            <img
+              src="src/img/product-3.webp"
+              alt=""
+              loading="lazy"
+              class="drop-shadow-sm w-64"
+            />
+
+            <div class="px-3 mt-3">
               <h3 class="text-xl font-semibold leading-tight">
-                LuxeComfort Office <br />Seating
+                Laszlo Warm White<br />
+                Boucle Swivel Chair
               </h3>
-              <p class="mt-1 pb-5">IDR 6.399.000</p>
+              <p class="mt-1 pb-5">IDR 12.999.000</p>
             </div>
           </div>
           <div
-            class="snap-center drop-shadow-xl mx-3 w-9/5 bg-white w-fit rounded-xl shrink-0"
+            class="snap-center drop-shadow-md mx-3 w-9/5 bg-white w-fit shrink-0 rounded-md overflow-hidden"
           >
-            <div class="p-5">
-              <div class="rounded-2xl overflow-hidden">
-                <img src="src/img/chair-3.png" alt="" class="drop-shadow-sm" />
-              </div>
-            </div>
-            <div class="ml-5">
+            <img
+              src="src/img/product-4.webp"
+              alt=""
+              loading="lazy"
+              class="drop-shadow-sm w-64"
+            />
+
+            <div class="px-3 mt-3">
               <h3 class="text-xl font-semibold leading-tight">
-                ErgoStyle Executive <br />Throne
+                Mardones Camel Brown<br />
+                Velvet Lounge Chair
               </h3>
-              <p class="mt-1 pb-5">IDR 13.599.000</p>
+              <p class="mt-1 pb-5">IDR 15.000.000</p>
             </div>
           </div>
           <div
-            class="snap-center drop-shadow-xl mx-3 w-9/5 bg-white w-fit rounded-xl shrink-0"
+            class="snap-center drop-shadow-md mx-3 w-9/5 bg-white w-fit shrink-0 rounded-md overflow-hidden"
           >
-            <div class="p-5">
-              <div class="rounded-2xl overflow-hidden">
-                <img src="src/img/chair-1.png" alt="" class="drop-shadow-sm" />
-              </div>
-            </div>
-            <div class="ml-5">
+            <img
+              src="src/img/product-2.webp"
+              alt=""
+              loading="lazy"
+              class="drop-shadow-sm w-64"
+            />
+
+            <div class="px-3 mt-3">
               <h3 class="text-xl font-semibold leading-tight">
-                EliteErgo Executive <br />Seating
+                Fitz Channeled Green<br />
+                Velvet Swivel Chair
               </h3>
-              <p class="mt-1 pb-5">IDR 9.999.000</p>
+              <p class="mt-1 pb-5">IDR 14.599.000</p>
             </div>
           </div>
         </div>
@@ -435,15 +715,15 @@
       </h2>
       <div class="flex flex-row mt-5 border-b-2 pb-3">
         <img
-          src="src/img/showcase-1.front.jpg"
+          src="src/img/sofa3.webp"
           alt=""
-          class="w-1/2 p-3 border-2 rounded-lg object-cover"
+          class="w-1/2 border-2 rounded-lg object-cover"
         />
         <div class="ml-3 flex flex-col justify-center">
           <h2 class="text-lg font-semibold leading-tight">
-            ErgoLux Elegance Chair
+            Single Camel Velvet Sofa
           </h2>
-          <p class="mt-1">IDR 12.000.000</p>
+          <p class="mt-1">IDR 19.399.000</p>
         </div>
       </div>
       <div class="mt-3">
@@ -497,7 +777,6 @@
       type="text/javascript"
       src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"
     ></script>
-
     <script>
       var swiper = new Swiper(".mySwiper", {
         pagination: {
@@ -510,27 +789,60 @@
         },
       });
 
-      window.addEventListener("scroll", function () {
-        const nav = document.getElementById("nav-product");
-        const icons = document.querySelectorAll("#nav-icon");
+      const humList = document.getElementById("humberger-menu");
 
-        if (window.scrollY > 10) {
-          icons.forEach((e) => {
-            e.classList.remove("text-white");
-            e.classList.add("text-slate-800");
-          });
-          nav.classList.remove("bg-black");
-          nav.classList.remove("bg-opacity-40");
-          nav.classList.add("bg-white");
-        } else {
-          icons.forEach((e) => {
-            e.classList.add("text-white");
-            e.classList.remove("text-slate-800");
-          });
-          nav.classList.add("bg-black");
-          nav.classList.add("bg-opacity-40");
-          nav.classList.remove("bg-white");
+      humList.addEventListener("click", () => {
+        humList.classList.toggle("text-pink-400");
+        const listMenu = document.getElementById("list-menu");
+        const nav = document.querySelector("nav");
+        nav.classList.add("bg-glass");
+        listMenu.classList.toggle("hidden");
+        listMenu.classList.toggle("flex");
+      });
+
+      const searchBar = document.getElementById("search-bar");
+      const searchButton = document.querySelectorAll("#search-button");
+
+      // Fungsi untuk menyembunyikan searchBar
+      function hideSearchBar() {
+        searchBar.classList.add("hidden");
+      }
+
+      // Event listener untuk saat tombol "Esc" ditekan
+      document.addEventListener("keyup", (e) => {
+        if (e.key === "Escape") {
+          hideSearchBar();
         }
+      });
+
+      // Event listener untuk saat dokumen di-klik
+      document.addEventListener("click", (event) => {
+        // Periksa apakah elemen yang diklik bukan bagian dari searchBar atau searchButton
+        if (
+          !searchBar.contains(event.target) &&
+          !Array.from(searchButton).some((button) =>
+            button.contains(event.target)
+          )
+        ) {
+          hideSearchBar();
+        }
+      });
+
+      searchButton.forEach((button) => {
+        button.addEventListener("click", () => {
+          button.classList.toggle("text-pink-400");
+          const nav = document.querySelector("nav");
+          nav.classList.add("bg-glass");
+          searchBar.classList.toggle("hidden");
+
+          // Tambahkan penundaan sebelum mendapatkan fokus pada elemen input
+          setTimeout(() => {
+            const inputElement = searchBar.querySelector(
+              'input[name="keyword"]'
+            );
+            inputElement.focus();
+          }, 100);
+        });
       });
 
       function variantModalOn() {
