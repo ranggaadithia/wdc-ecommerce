@@ -1,5 +1,5 @@
 Note:
-dalam website ini terdapat fitur vr pada halaman product.html, sehingga memerlukan beberapa kriteria untuk dapat menjalankannya.
+dalam website ini terdapat fitur ar pada halaman product.html, sehingga memerlukan beberapa kriteria untuk dapat menjalankannya.
 Pastikan:
 
 1. Menggunakan HP Android
